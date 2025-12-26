@@ -203,6 +203,7 @@ cython_debug/
 
 
 .env
+.DS_Store
 
 # Marimo
 marimo/_static/
