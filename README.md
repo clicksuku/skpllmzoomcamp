@@ -1,2 +1,2 @@
 # skpllmzoomcamp
-LLM Zoomcamp
+SKP LLM Zoomcamp

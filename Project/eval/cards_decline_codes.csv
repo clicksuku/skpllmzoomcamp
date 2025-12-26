@@ -1,0 +1,68 @@
+code,declinereason,expected_output
+01,Refer to issuer - The issuing bank prevented the transaction without a specific reason,The issuing bank prevented the transaction.
+02,Refer to issuer (special condition) - The customer's bank prevented the transaction,The customer's bank prevented the transaction.
+03,Invalid merchant - Merchant not recognized or invalid,Invalid merchant.
+04,Pick up card (no fraud) - Bank wants merchant to hold the card (overdrawn/expired),The customer's bank prevented the transaction and is also telling the merchant to hold the card. This doesn't imply fraud but rather overdrawn cards or expired ones.
+05,Do not honor - Bank told merchant not to accept the card,The customer's bank stopped the transaction and told the merchant to 'not honor' the card.
+06,Error - Unspecified transaction error,The issuing bank can't specify the error but something went wrong with the transaction.
+07,Pick up card (fraud) - Card flagged as fraudulent,The customer's bank stopped the transaction because the card or bank account has been flagged as fraudulent.
+08,Pick up card (fraud) - Card flagged as fraudulent,Pick up card (fraud) - Card flagged as fraudulent
+09,Pick up card (fraud) - Card flagged as fraudulent,Pick up card (fraud) - Card flagged as fraudulent
+10,Partial approval - Bank accepts partial payment but blocks the rest,The issuing bank accepts a part of the payment but blocks the rest typically due to exceeding the credit limit or funds in the account.
+12,Invalid transaction - Transaction type is invalid,The transaction attempted is invalid.
+13,Invalid amount - Invalid transaction amount entered,The amount you entered for the transaction was invalid.
+14,Invalid account number - Card number is invalid,The card number is invalid.
+15,No such issuer - First digit identifies wrong issuing bank,The first digit which identifies the card's issuing bank was incorrect.
+19,Re-enter transaction - Unknown error occurred,An unknown error occurred.
+21,No action taken,No action taken
+25,Unable to locate record in file,Unable to locate record in file
+28,File temporarily unavailable,An error occurred during the transaction without the reason specified.
+30,Format error,Format error
+41,Lost card pick up - Card reported lost, The card's legitimate owner has reported it lost or stolen so the card issuer has denied the transaction.
+43,Stolen card pick up - Card reported stolen, The legitimate owner has reported the card as stolen so the card issuer denied the transaction.
+51,Insufficient funds/over credit limit,The card issuer is blocking the transaction because the account has already exceeded the credit limit or the pending transaction would put the card over.
+52,No current account,No current account
+53,No savings account,No savings account
+54,Expired card,The expiration date has already passed.
+55,Incorrect PIN,Incorrect PIN
+57,Transaction not permitted - card,This code shows up when you're trying to use a card for a transaction that's specifically not allowed.
+58,Transaction not permitted - terminal,If the merchant account connected to the terminal or payment processor is not properly configured you'll see this error.
+59,Suspected fraud,Suspected fraud
+61,Exceeds approval amount limit,Exceeds approval amount limit
+62,Invalid/restricted service code,The invalid service code can refer to two specific situations.1: You're trying to process an American Express or Discover card but the system doesn't support those card issuers. 2: You tried to pay for online purchase with a card that doesn't support online payments.
+63,Security violation - Incorrect CVV/CVC/CID,The three-digit CVV2 or CVC or the four-digit CID security code was incorrect or wasn't read properly.
+64,Transaction does not fulfil AML requirement,Transaction does not fulfil AML requirement
+65,Exceeds withdrawal limit,The credit card user has exceeded the credit limit.
+70,PIN data required,PIN data required
+71,PIN Not Changed,PIN Not Changed
+75,Allowable number of PIN entry attempts exceeded,Allowable number of PIN tries exceeded.
+76,Invalid/nonexistent 'To Account' specified,Invalid/nonexistent 'To Account' specified
+77,Invalid/nonexistent 'From Account' specified,Invalid/nonexistent 'From Account' specified
+78,Blocked - first use,Blocked - first use
+79,Already reversed,Already reversed
+82,Negative CAM dCVV iCVV or CVV results, Negative CAM dCVV iCVV or CVV results
+85,No reason to decline,The issuing bank can't identify a specific problem but the transaction still didn't go through.
+86,Cannot verify PIN,Cannot verify PIN
+87,Purchase Amount Only - No Cash Back Allowed,Purchase Amount Only - No Cash Back Allowed
+88,Cryptographic failure,Cryptographic failure
+89,Unacceptable PIN - Retry,Unacceptable PIN - Retry
+90,Cutoff is in progress,Cutoff is in progress
+91,Issuer or switch unavailable,The terminal or payment processor was unable to complete the payment authorization.
+92,Unable to route transaction,The terminal cannot reach the card issuer to process the transaction.
+93,Transaction can't be completed - legal violation,The issuing bank has recognized (or has been informed of) a legal violation on the part of the credit card user and assets have been frozen.
+94,Duplicate transaction detected,Duplicate transaction detected
+96,System error,There's a temporary issue with the payment processor.
+97,Invalid CVV,Invalid CVV
+1A,Additional customer authentication required,Additional customer authentication required
+R0,Recurring charge stopped at customer request,Customer asked to stop the recurring payment.
+R1,Recurring charge stopped at customer request,Customer asked to stop the recurring payment.
+CV,Card type verification error (chip/magnetic strip issue),The card reader had a problem verifying the card. This could be an issue with the microchip or the magnet strip.
+W1,Error connecting to bank,This can happen because of a power or service outage.
+W2,Error connecting to bank,This can happen because of a power or service outage.
+W9,Error connecting to bank,This can happen because of a power or service outage.
+00,Approved or completed successfully (included for reference),(Included for reference)
+08,Honor with ID,Honor with ID
+1Z,Authorization system or issuer system inoperative,Authorization system or issuer system inoperative
+215,Lost/stolen card,The real cardholder has reported the card as lost or stolen and the card issuer blocks the transaction.
+534,Do not honor high fraud,The transaction failed PayPal or Google Checkout risk modeling.
+596,Suspected fraud,The card issuer suspects fraud and has blocked the transaction.
